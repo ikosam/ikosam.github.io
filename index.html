@@ -297,7 +297,21 @@
 <p>更多信息: <a href="https://hexo.io/docs/generate.html" target="_blank" rel="external">Generate</a></p>
 <h3 id="发布到GitHub服务器上"><a href="#发布到GitHub服务器上" class="headerlink" title="发布到GitHub服务器上"></a>发布到GitHub服务器上</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>更多信息：<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h3><p>啦啦啦啦…..</p>
+<h3 id="第二节"><a href="#第二节" class="headerlink" title="第二节"></a>第二节</h3><p>巴拉巴拉巴拉拉巴勒….</p>
+<pre><code>protected Object getTargetRepository(RepositoryMetadata metadata) {
+    Class&lt;?&gt; repositoryInterface = metadata.getRepositoryInterface();
 
+    if (isBaseRepository(repositoryInterface)) {
+
+        JpaEntityInformation&lt;M, ID&gt; entityInformation = getEntityInformation((Class&lt;M&gt;) metadata.getDomainType());
+        BaseRepositoryImpl repository = new BaseRepositoryImpl&lt;M, ID&gt;(entityInformation, entityManager);
+
+        return repository;
+    }
+    return super.getTargetRepository(metadata);
+}
+</code></pre>
       
     </div>
     
